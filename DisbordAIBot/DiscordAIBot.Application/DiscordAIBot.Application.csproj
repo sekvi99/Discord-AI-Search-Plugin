@@ -6,4 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="../DiscordAIBot.Domain/DiscordAIBot.Domain.csproj" />
+        <PackageReference Include="FluentValidation" Version="11.8.1" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+    </ItemGroup>
+
 </Project>
