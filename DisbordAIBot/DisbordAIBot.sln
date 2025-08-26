@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisbordAIBot", "DisbordAIBot.csproj", "{154CA9F8-15D3-42DA-A306-AB6CE4D2365F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordAIBot.Domain", "DiscordAIBot.Domain\DiscordAIBot.Domain.csproj", "{62CE22D4-D4CE-4DE8-8DB5-64BE1950EC81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordAIBot.Application", "DiscordAIBot.Application\DiscordAIBot.Application.csproj", "{A498B10B-C3FC-42D8-8E0C-E9945284ED52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordAIBot.Infrastructure", "DiscordAIBot.Infrastructure\DiscordAIBot.Infrastructure.csproj", "{1FFA3749-033E-40C9-A650-A40C18A7035E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{154CA9F8-15D3-42DA-A306-AB6CE4D2365F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154CA9F8-15D3-42DA-A306-AB6CE4D2365F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154CA9F8-15D3-42DA-A306-AB6CE4D2365F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154CA9F8-15D3-42DA-A306-AB6CE4D2365F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62CE22D4-D4CE-4DE8-8DB5-64BE1950EC81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CE22D4-D4CE-4DE8-8DB5-64BE1950EC81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CE22D4-D4CE-4DE8-8DB5-64BE1950EC81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CE22D4-D4CE-4DE8-8DB5-64BE1950EC81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A498B10B-C3FC-42D8-8E0C-E9945284ED52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A498B10B-C3FC-42D8-8E0C-E9945284ED52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A498B10B-C3FC-42D8-8E0C-E9945284ED52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A498B10B-C3FC-42D8-8E0C-E9945284ED52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FFA3749-033E-40C9-A650-A40C18A7035E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FFA3749-033E-40C9-A650-A40C18A7035E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FFA3749-033E-40C9-A650-A40C18A7035E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FFA3749-033E-40C9-A650-A40C18A7035E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
