@@ -19,6 +19,7 @@ public class ApplicationLayerTests : TestBase
         var services = new ServiceCollection();
         
         // Act
+        services.AddLogging();
         services.AddApplication();
         var provider = services.BuildServiceProvider();
 

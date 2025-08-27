@@ -19,15 +19,15 @@ jobs:
           dotnet-version: '9.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore DisbordAIBot/DisbordAIBot.sln
 
       - name: Build
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build DisbordAIBot/DisbordAIBot.sln --no-restore --configuration Release
 
       - name: Test with coverage
         run: |
           dotnet tool install --global dotnet-reportgenerator-globaltool
-          dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory ./TestResults
+          dotnet test DisbordAIBot/DisbordAIBot.sln --no-build --configuration Release --collect:"XPlat Code Coverage" --results-directory ./TestResults
           reportgenerator -reports:./TestResults/**/coverage.cobertura.xml -targetdir:./TestResults/coverage-report -reporttypes:TextSummary
 
       - name: Check coverage threshold
