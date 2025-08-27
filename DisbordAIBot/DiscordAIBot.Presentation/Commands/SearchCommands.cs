@@ -20,7 +20,7 @@ public class SearchCommands : ModuleBase<SocketCommandContext>
     [Summary("Search across all channels for specific information")]
     public async Task SearchAllChannelsAsync([Remainder] string query)
     {
-        await ExecuteSearchAsync(query, useAI: false);
+        await ExecuteSearchAsync(query, useAI: true);
     }
 
     [Command("ai")]
@@ -44,7 +44,7 @@ public class SearchCommands : ModuleBase<SocketCommandContext>
         await ExecuteSearchAsync(query, useAI: false, channelId: new ChannelId(channel.Id));
     }
 
-    private async Task ExecuteSearchAsync(string query, bool useAI, ChannelId? channelId = null, UserId? userId = null)
+    private async Task ExecuteSearchAsync(string query, bool useAI = true, ChannelId? channelId = null, UserId? userId = null)
     {
         if (string.IsNullOrWhiteSpace(query) && userId == null)
         {

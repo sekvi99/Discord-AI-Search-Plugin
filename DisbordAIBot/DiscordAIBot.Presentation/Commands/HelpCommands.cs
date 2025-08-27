@@ -62,7 +62,7 @@ public class HelpCommands : ModuleBase<SocketCommandContext>
             false);
 
         embed.AddField("🛠️ **Built With**",
-            "• C# .NET 8.0\n" +
+            "• C# .NET 9.0\n" +
             "• Discord.NET\n" +
             "• OpenAI API\n" +
             "• Entity Framework Core\n" +
