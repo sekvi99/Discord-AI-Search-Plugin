@@ -1,16 +1,12 @@
-﻿using Discord;
-using Discord.WebSocket;
+﻿using DisbordAIBot;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using DiscordAIBot.Application;
 using DiscordAIBot.Infrastructure;
 using DiscordAIBot.Infrastructure.Data;
-// using DiscordAIBot.Presentation;
-// using DiscordAIBot.Presentation.Services;
+using DiscordAIBot.Presentation;
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
@@ -52,8 +48,8 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
             // Add layers
             services.AddApplication();
             services.AddInfrastructure(configuration);
-            // services.AddPresentation();
+            services.AddPresentation();
 
             // Add hosted service
-            // services.AddHostedService<DiscordBotHostedService>();
+            services.AddHostedService<DiscordBotHostedService>();
         });

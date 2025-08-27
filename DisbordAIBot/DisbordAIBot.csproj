@@ -11,16 +11,19 @@
       <Compile Remove="DiscordAIBot.Application\**" />
       <Compile Remove="DiscordAIBot.Domain\**" />
       <Compile Remove="DiscordAIBot.Infrastructure\**" />
+      <Compile Remove="DiscordAIBot.Presentation\**" />
       <Compile Remove="DiscordAIBot.Tests\**" />
       <Compile Remove="DiscordAIBot.UnitTests\**" />
       <EmbeddedResource Remove="DiscordAIBot.Application\**" />
       <EmbeddedResource Remove="DiscordAIBot.Domain\**" />
       <EmbeddedResource Remove="DiscordAIBot.Infrastructure\**" />
+      <EmbeddedResource Remove="DiscordAIBot.Presentation\**" />
       <EmbeddedResource Remove="DiscordAIBot.Tests\**" />
       <EmbeddedResource Remove="DiscordAIBot.UnitTests\**" />
       <None Remove="DiscordAIBot.Application\**" />
       <None Remove="DiscordAIBot.Domain\**" />
       <None Remove="DiscordAIBot.Infrastructure\**" />
+      <None Remove="DiscordAIBot.Presentation\**" />
       <None Remove="DiscordAIBot.Tests\**" />
       <None Remove="DiscordAIBot.UnitTests\**" />
     </ItemGroup>
@@ -35,6 +38,7 @@
       <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
       <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
       <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+      <ProjectReference Include="DiscordAIBot.Presentation\DiscordAIBot.Presentation.csproj" />
     </ItemGroup>
 
     <ItemGroup>
