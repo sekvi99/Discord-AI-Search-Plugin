@@ -29,12 +29,17 @@ public class SearchMessagesQueryHandler : IRequestHandler<SearchMessagesQuery, S
     {
         try
         {
-            var guild = await _guildRepository.GetByIdAsync(request.GuildId, cancellationToken);
-            if (guild == null)
-            {
-                return new SearchMessagesResult(false, Enumerable.Empty<SearchResult>(), 
-                    ErrorMessage: "Guild not found. Please ensure the bot is properly configured for this server.");
-            }
+                // Try to get the guild from the repository
+                var guild = await _guildRepository.GetByIdAsync(request.GuildId, cancellationToken);
+                if (guild == null)
+                {
+                    // If not found, create and add it using the Discord API
+                    // You may need to pass the guild name in the request, or fetch it from Discord
+                    var discordGuild = _searchService.GetDiscordGuild(request.GuildId); // Implement this helper in your service
+                    var guildName = discordGuild?.Name ?? "Unknown";
+                    guild = new Guild(request.GuildId, guildName);
+                    await _guildRepository.AddAsync(guild, cancellationToken);
+                }
 
             IEnumerable<SearchResult> results;
 

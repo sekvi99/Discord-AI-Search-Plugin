@@ -18,6 +18,11 @@ public class DiscordSearchService : IDiscordSearchService
         _discordClient = discordClient;
         _logger = logger;
     }
+    
+    public SocketGuild? GetDiscordGuild(GuildId guildId)
+    {
+        return _discordClient.GetGuild(guildId);
+    }
 
     public async Task<IEnumerable<SearchResult>> SearchAcrossGuildAsync(GuildId guildId, string query, CancellationToken cancellationToken = default)
     {
