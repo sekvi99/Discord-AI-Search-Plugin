@@ -17,7 +17,10 @@ public static class DependencyInjection
     {
         // Database
         services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlite(configuration.GetConnectionString("DefaultConnection") ?? "Data Source=discordbot.db"));
+            options.UseSqlite(configuration.GetConnectionString("DefaultConnection") ?? "Data Source=discordbot.db",
+                b => b.MigrationsAssembly("DisbordAIBot")
+                )
+            );
 
         // Discord
         services.AddSingleton(new DiscordSocketClient(new DiscordSocketConfig

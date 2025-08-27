@@ -8,18 +8,21 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="DisbordAIBot.Infrastructure\**" />
       <Compile Remove="DiscordAIBot.Application\**" />
       <Compile Remove="DiscordAIBot.Domain\**" />
       <Compile Remove="DiscordAIBot.Infrastructure\**" />
       <Compile Remove="DiscordAIBot.Presentation\**" />
       <Compile Remove="DiscordAIBot.Tests\**" />
       <Compile Remove="DiscordAIBot.UnitTests\**" />
+      <EmbeddedResource Remove="DisbordAIBot.Infrastructure\**" />
       <EmbeddedResource Remove="DiscordAIBot.Application\**" />
       <EmbeddedResource Remove="DiscordAIBot.Domain\**" />
       <EmbeddedResource Remove="DiscordAIBot.Infrastructure\**" />
       <EmbeddedResource Remove="DiscordAIBot.Presentation\**" />
       <EmbeddedResource Remove="DiscordAIBot.Tests\**" />
       <EmbeddedResource Remove="DiscordAIBot.UnitTests\**" />
+      <None Remove="DisbordAIBot.Infrastructure\**" />
       <None Remove="DiscordAIBot.Application\**" />
       <None Remove="DiscordAIBot.Domain\**" />
       <None Remove="DiscordAIBot.Infrastructure\**" />

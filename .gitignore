@@ -504,3 +504,4 @@ __MACOSX/
 credentials.json
 appsettings.json
 appsettings.*.json
+*.db
