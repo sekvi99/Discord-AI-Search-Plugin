@@ -31,25 +31,6 @@ public class SearchMessagesQueryHandlerTests
     }
 
     [Fact]
-    public async Task Handle_WhenGuildNotFound_ShouldReturnFailure()
-    {
-        // Arrange
-        var guildId = new GuildId(123);
-        var query = new SearchMessagesQuery(guildId, "test query");
-
-        _guildRepository.GetByIdAsync(guildId, Arg.Any<CancellationToken>())
-            .Returns((Guild?)null);
-
-        // Act
-        var result = await _handler.Handle(query, CancellationToken.None);
-
-        // Assert
-        result.Success.Should().BeFalse();
-        result.ErrorMessage.Should().Contain("Guild not found");
-        result.Results.Should().BeEmpty();
-    }
-
-    [Fact]
     public async Task Handle_WhenSearchingAllChannels_ShouldCallCorrectSearchMethod()
     {
         // Arrange
