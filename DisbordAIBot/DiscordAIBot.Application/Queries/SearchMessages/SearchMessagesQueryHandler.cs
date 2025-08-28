@@ -35,7 +35,7 @@ public class SearchMessagesQueryHandler : IRequestHandler<SearchMessagesQuery, S
                 {
                     // If not found, create and add it using the Discord API
                     // You may need to pass the guild name in the request, or fetch it from Discord
-                    var discordGuild = _searchService.GetDiscordGuild(request.GuildId); // Implement this helper in your service
+                    var discordGuild = _searchService.GetDiscordGuild(request.GuildId);
                     var guildName = discordGuild?.Name ?? "Unknown";
                     guild = new Guild(request.GuildId, guildName);
                     await _guildRepository.AddAsync(guild, cancellationToken);

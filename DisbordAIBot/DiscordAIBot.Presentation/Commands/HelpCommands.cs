@@ -22,6 +22,10 @@ public class HelpCommands : ModuleBase<SocketCommandContext>
             "`!search channel #channel <query>` - Search within specific channel",
             false);
 
+        embed.AddField("🧠 **Explanation Command**",
+            "`!explain <query>` - Get an AI-powered explanation or summary for any question, sentence, or concept",
+            false);
+
         embed.AddField("⚙️ **Configuration Commands** (Admin Only)",
             "`!setapikey <api-key>` - Set OpenAI API key for AI features\n" +
             "`!removeapikey` - Remove stored API key",

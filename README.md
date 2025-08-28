@@ -97,6 +97,11 @@ dotnet run --project DisbordAIBot/DisbordAIBot.csproj
 - `!setapikey <api-key>` — Set OpenAI API key for AI features
 - `!removeapikey` — Remove stored API key
 
+
+### Explanation Command
+
+- `!explain <query>` — Get an AI-powered explanation or summary for any question, sentence, or concept
+
 ### Other Commands
 
 - `!help` — Show help message
